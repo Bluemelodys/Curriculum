@@ -179,7 +179,7 @@
         divEl.className = 'cell';
 
         let detailDivEl = document.createElement('div');
-        if (i != 0 && ((8 * i + j) % 8) != 0) {
+        if (i != 0 && j != 0) {
           detailDivEl.className = 'detail';
           detailDivEl.innerHTML = cdetail[8 * i + j];
         };
@@ -195,7 +195,6 @@
         divEl.append(briefDivEl);
         tdEl.onclick = function (event) {
           let names = detailDivEl.className.split(' ');
-
           if (names.indexOf('open') >= 0) {
             names = names.filter((x) => x != 'open')
           } else {
@@ -205,13 +204,12 @@
         };
 
         let classNames = [];
-        if (i != 0 && (8 * i + j) % 8 != 0)
+        if (i != 0 && j != 0)
           classNames.push('hover');
         if (i == 0)
           classNames.push('row');
-        if (i != 0 && (8 * i + j) % 8 == 0)
+        if (i != 0 && j == 0)
           classNames.push('column');
-
         tdEl.className = classNames.join(' ');
         tdEl.append(divEl);
         trEl.append(tdEl);
