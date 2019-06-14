@@ -7,7 +7,7 @@
     h1 {
       text-align: center;
       font-size: 2em;
-      color:  rgb(116, 133, 182);
+      color: rgb(116, 133, 182);
     }
 
     td {
@@ -16,38 +16,39 @@
       text-align: center;
       overflow-wrap: break-word;
       border: 1px solid rgb(152, 148, 207);
-      
+
     }
+
     .tablestyle {
-        background: rgb(114, 144, 190);
-        background: url(http://b-ssl.duitang.com/uploads/item/201612/04/20161204105902_kvjna.jpeg);
-        background-size: 1080px 498px;
+      background: rgb(114, 144, 190);
+      background: url(http://b-ssl.duitang.com/uploads/item/201612/04/20161204105902_kvjna.jpeg);
+      background-size: 1080px 498px;
       border-collapse: collapse;
       width: 80%;
-      margin: 15px auto;        
+      margin: 15px auto;
     }
 
-    
+
 
     td.row {
-        color: aliceblue;
-     line-height: 5em;
-      background-color:  rgb(167, 199, 241);
-      background: url( http://b-ssl.duitang.com/uploads/item/201504/01/20150401H1703_SCPxn.png);
-    
+      color: aliceblue;
+      line-height: 5em;
+      background-color: rgb(167, 199, 241);
+      background: url(http://b-ssl.duitang.com/uploads/item/201504/01/20150401H1703_SCPxn.png);
+
     }
 
-    td.column{
-        color: rgb(76, 94, 146);
-        line-height: 4ex
+    td.column {
+      color: rgb(76, 94, 146);
+      line-height: 4ex
     }
 
     td.hover:hover {
       color: rgba(28, 31, 70, 0.822);
-            background-color: rgb(212, 221, 243);
-            position: relative;
-            right: -4px;
-            bottom: -5px;
+      background-color: rgb(212, 221, 243);
+      position: relative;
+      right: -4px;
+      bottom: -5px;
     }
 
     .cell {
@@ -65,10 +66,8 @@
       height: 11em;
       width: 10em;
       background-color: rgb(191, 207, 243);
-      
-    }
 
-    
+    }
   </style>
 </head>
 
@@ -210,9 +209,9 @@
           classNames.push('hover');
         if (i == 0)
           classNames.push('row');
-        if (i!=0&&(8 * i + j) % 8 == 0)
+        if (i != 0 && (8 * i + j) % 8 == 0)
           classNames.push('column');
-        
+
         tdEl.className = classNames.join(' ');
         tdEl.append(divEl);
         trEl.append(tdEl);
